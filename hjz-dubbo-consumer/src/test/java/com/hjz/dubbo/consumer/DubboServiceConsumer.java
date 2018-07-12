@@ -10,10 +10,19 @@ import com.alibaba.dubbo.common.logger.Logger;
 import com.alibaba.dubbo.common.logger.LoggerFactory;
 import com.hjz.dubbo.api.DubboServiceTest;
 
+/**
+ * 消费者调用接口
+ * @author zwc
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:dubbo-consumer-example.xml"})
 public class DubboServiceConsumer {
 	private static final Logger logger = LoggerFactory.getLogger(DubboServiceConsumer.class);
+	
+	/*
+	 * 接口实例
+	 */
 	@Autowired
 	private DubboServiceTest dubboServiceTest;
 	
