@@ -15,14 +15,19 @@
 	
 	<!-- 同一个工程只配置一份即可 -->
 	<dubbo:application name="hjz-dubbo" owner="hjzgg"/>
+	
 	<!-- 发布dubbo需要对外的协议（dubbo）和端口（20880），20880是dubbo默认提供的端口，
 	 若一台机器发布多个dubbo服务，则此端口需要显示配置，多个dubbo服务端口需要不一样，否则会端口冲突 -->
 	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" serialization="java"/>
+	
 	<!-- 配置dubbo服务失败后的重试次数和接口超时时间 -->
 	<dubbo:provider retries="0" timeout="${dubbo.provider.timeout}"/>
+	
 	<!-- dubbo注册到zookeeper，用于预发布或生产环境 -->
 	<!-- <dubbo:registry protocol="zookeeper" address="${zookeeper.addr}" /> -->
+	
 	<!-- dubbo不注册到任何registry，用于开发或测试环境-->
 	<dubbo:registry protocol="zookeeper" address="N/A" />
+	
 	<dubbo:service ref="dubboServiceTest" interface="com.hjz.dubbo.api.DubboServiceTest"/>
 </beans>

@@ -15,27 +15,38 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   <dependencies>
+  
     <dependency>
+    
+     <!-- junit 测试 -->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- dubbo api-->
     <dependency>
     	<groupId>com.hjz</groupId>
     	<artifactId>hjz-dubbo-api</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
+    
+    <!-- spring整合junit测试 -->
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-test</artifactId>
     	<version>4.3.1.RELEASE</version>
     </dependency>
+    
+    <!-- spring 框架加载dubbo -->
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context</artifactId>
     	<version>4.3.1.RELEASE</version>
     </dependency>
+    
   </dependencies>
 </project>

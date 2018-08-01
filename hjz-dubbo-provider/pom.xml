@@ -16,12 +16,16 @@
   <build>
     <finalName>hjz-dubbo-provider</finalName>
   </build>
+  
   <dependencies>
+  <!-- dubbo api -->
   	<dependency>
   		<groupId>com.hjz</groupId>
   		<artifactId>hjz-dubbo-api</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	
+  	 <!-- spring -->
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-web</artifactId>
